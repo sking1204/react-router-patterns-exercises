@@ -1,0 +1,41 @@
+.red-background {
+    background-color: red;
+  }
+  
+  .purple-background {
+    background-color: purple;
+  }
+  
+  .orange-background {
+    background-color: orange;
+  }
+
+  /* ColorPage.css */
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .color-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Set text color to white for better contrast */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bold;
+    font-size: 50px;
+    white-space:pre-wrap;
+    
+    
+  }
+
+ .color-page-txt{
+    margin-bottom: 20px;
+ }
+  
+  
+  
+
+  
