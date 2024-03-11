@@ -19,8 +19,8 @@ function App() {
 
        
       <BrowserRouter>
-        <RoutesList colors={colors} />
-        <RenderColorPicker addColor={addColor} /> {/* Pass addColor function to RenderColorPicker */}
+        <RoutesList colors={colors} addColor={addColor} />
+        {/* <RenderColorPicker addColor={addColor} /> Pass addColor function to RenderColorPicker */}
       </BrowserRouter>
     </div>
   );

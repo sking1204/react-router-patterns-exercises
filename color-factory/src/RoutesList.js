@@ -9,12 +9,12 @@ import ColorPage from "./ColorPage";
    
 
 
-function RoutesList({colors}) {
+function RoutesList({colors, addColor}) {
   return (
     <Routes>
       <Route path="/colors" element={<ColorList colors={colors} />} />       
       <Route path="/colors/:color" element={<ColorPage colors={colors}/>} />
-      <Route path="/colors/new" element={<RenderColorPicker />} />         
+      <Route path="/colors/new" element={<RenderColorPicker addColor={addColor} />} />         
       <Route path="*" element={<Navigate to="/colors" />} />    
     </Routes>
   );

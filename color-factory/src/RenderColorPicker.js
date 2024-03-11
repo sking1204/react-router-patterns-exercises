@@ -1,20 +1,26 @@
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/css";
 import {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './RenderColorPicker.css'
 
 
 function RenderColorPicker ({addColor}) {
 
  const [color, setColor] = useColor('#561ecb');
+ const navigate = useNavigate(); // Initialize useHistory
 //  const [showColorPicker, setShowColorPicker] = useState(false);
+
+const handleAddColor = () =>{
+    addColor(color.hex)
+    navigate('/'); //Navigate back to home page after adding color
+}
 
  return(
     <div>
        {/* {showColorPicker && ( */}
         <ColorPicker color={color} onChange={setColor}  />
-        <button onClick={() => addColor(color.hex)}>Add Color</button> {/* Add button to add color */}
+        <button onClick={() => handleAddColor()}>Add Color</button> {/* Add button to add color */}
 
         <div>
             <p>
